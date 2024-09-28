@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add New Book</h2>
+        <form method="POST">  <!-- Ensure method is set to POST -->
+            {% csrf_token %}  <!-- Include CSRF token -->
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="bookTitle">Title</label>
+                    <input type="text" class="form-control" id="bookTitle" name="bookTitle" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid title.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" class="form-control" id="bookAuthor" name="bookAuthor" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid author name.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="bookGenre">Genre</label>
+                    <input type="text" class="form-control" id="bookGenre" name="bookGenre" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid genre.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="publishedDate">Published Date</label>
+                    <input type="date" class="form-control" id="publishedDate" name="publishedDate" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid published date.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label for="bookISBN">ISBN</label>
+                    <input type="text" class="form-control" id="bookISBN" name="bookISBN" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a valid ISBN.
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2poT62ytfhtkMEpL8O2zVgl5aP7rorn5pztIbxD9Knr74p5O2Kp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-6jog5kUwNUvxjgtppFyoiFAR2xaNt7k/9er1AaqCDP6RYIcfRDI1HqZ5i6tZTl8c" crossorigin="anonymous"></script>
+</body>
+</html>

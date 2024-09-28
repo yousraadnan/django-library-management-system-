@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Corrected the static link -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="add_new_book.html">Add New Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+            <!-- Available Books Button on the Right Side -->
+            <a class="btn btn-outline-success my-2 my-sm-0 ml-auto" href="{% url 'book_list' %}">Available Books</a>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <div class="content">
+            <h1 class="animated-text">BOOKSOGRAPHY</h1>
+            <p class="animated-paragraph">Welcome to our Book Store, where you find what you want.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2poT62ytfhtkMEpL8O2zVgl5aP7rorn5pztIbxD9Knr74p5O2Kp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-6jog5kUwNUvxjgtppFyoiFAR2xaNt7k/9er1AaqCDP6RYIcfRDI1HqZ5i6tZTl8c" crossorigin="anonymous"></script>
+</body>
+</html>
